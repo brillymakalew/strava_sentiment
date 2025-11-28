@@ -532,7 +532,7 @@ st.sidebar.markdown("---")
 # -----------------------------
 # Pilih algoritma sentiment
 # -----------------------------
-st.sidebar.subheader("🧠 Pilih Algoritma Sentiment")
+st.sidebar.subheader("🧠 Pilih Library Sentiment")
 
 algo_label = st.sidebar.selectbox(
     "Algoritma yang digunakan",
