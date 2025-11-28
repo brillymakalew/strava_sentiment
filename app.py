@@ -444,7 +444,7 @@ elif data_source == "Ambil dari Play Store":
     n_reviews = st.sidebar.slider(
         "Jumlah review yang diambil",
         min_value=100,
-        max_value=5000,
+        max_value=100000,
         step=100,
         value=1000,
         help="Untuk produksi bisa dinaikkan sampai ~100k, tapi transformer bakal berat.",
