@@ -28,7 +28,9 @@ def read_strava_csv(source):
         return pd.read_csv(source, sep=";", engine="python", on_bad_lines="skip")
 
 
-# Pastikan lexicon terunduh
+# =============================
+# Load VADER
+# =============================
 @st.cache_resource
 def load_vader():
     nltk.download("vader_lexicon")
@@ -36,6 +38,39 @@ def load_vader():
 
 
 sia = load_vader()
+
+
+# =============================
+# Load AFINN
+# =============================
+@st.cache_resource
+def load_afinn():
+    try:
+        from afinn import Afinn
+        return Afinn()
+    except ImportError:
+        st.error("Package 'afinn' belum terinstall. Jalankan: pip install afinn")
+        raise
+
+
+# =============================
+# Load Transformer (HuggingFace)
+# =============================
+@st.cache_resource
+def load_transformer():
+    try:
+        from transformers import pipeline
+        # Model sentiment Inggris 2 kelas (POSITIVE/NEGATIVE)
+        return pipeline(
+            "sentiment-analysis",
+            model="distilbert-base-uncased-finetuned-sst-2-english",
+        )
+    except ImportError:
+        st.error(
+            "Package 'transformers' (dan biasanya 'torch') belum terinstall.\n"
+            "Jalankan: pip install transformers torch"
+        )
+        raise
 
 
 # =============================
@@ -143,7 +178,7 @@ def load_sample_data():
     df = read_strava_csv("strava_playstore_dummy_reviews_100rows.csv")
 
     # Kalau nama kolom di file revisi beda, bisa di-rename di sini.
-    # Contoh (sesuaikan kalau perlu):
+    # Contoh (uncomment dan sesuaikan kalau perlu):
     # df = df.rename(columns={
     #     "id_review": "review_id",
     #     "text_review": "review_text",
@@ -168,9 +203,13 @@ def load_sample_data():
 def compute_sentiment(df: pd.DataFrame, algorithm: str = "vader") -> pd.DataFrame:
     """
     algorithm:
-        - "vader"  : sentiment murni dari teks (VADER)
-        - "rating" : sentiment dari rating saja (1-5)
-        - "hybrid" : gabungan VADER + rating
+        - "vader"          : sentiment murni dari teks (VADER)
+        - "rating"         : sentiment dari rating saja (1-5)
+        - "hybrid"         : gabungan VADER + rating
+        - "textblob"       : TextBlob polarity
+        - "afinn"          : AFINN lexicon
+        - "transformer"    : DistilBERT SST-2 (HuggingFace)
+        - "custom_lexicon" : Lexicon custom fokus akurasi
     """
     df = df.copy()
 
@@ -179,20 +218,105 @@ def compute_sentiment(df: pd.DataFrame, algorithm: str = "vader") -> pd.DataFram
         lambda r: (r - 3) / 2 if pd.notnull(r) else 0
     )
 
-    # text-based score (VADER) jika perlu
-    if algorithm in ("vader", "hybrid"):
-        df["text_sentiment"] = df["review_text"].astype(str).apply(
+    texts = df["review_text"].astype(str)
+
+    # Default: NaN
+    df["text_sentiment"] = np.nan
+
+    # Text-based algorithms
+    if algorithm == "vader":
+        df["text_sentiment"] = texts.apply(
             lambda x: sia.polarity_scores(x)["compound"]
         )
-    else:
-        df["text_sentiment"] = np.nan
 
-    # combine
-    if algorithm == "vader":
+    elif algorithm == "textblob":
+        try:
+            from textblob import TextBlob
+        except ImportError:
+            st.error("Package 'textblob' belum terinstall. Jalankan: pip install textblob")
+            raise
+
+        df["text_sentiment"] = texts.apply(
+            lambda x: TextBlob(x).sentiment.polarity
+        )
+
+    elif algorithm == "afinn":
+        af = load_afinn()
+        # AFINN score bisa besar, kita normalisasi kira-kira ke [-1, 1]
+        df["text_sentiment"] = texts.apply(
+            lambda x: max(-1.0, min(1.0, af.score(x) / 10.0))
+        )
+
+    elif algorithm == "transformer":
+        sent_pipe = load_transformer()
+        texts_list = texts.tolist()
+        scores = []
+        batch_size = 16  # jangan terlalu besar biar RAM aman
+
+        for i in range(0, len(texts_list), batch_size):
+            batch = texts_list[i : i + batch_size]
+            results = sent_pipe(batch)
+            for r in results:
+                s = r["score"]
+                label = r["label"].upper()
+                # POSITIVE -> +score, NEGATIVE -> -score
+                if "NEG" in label:
+                    s = -s
+                scores.append(s)
+
+        df["text_sentiment"] = scores
+
+    elif algorithm == "custom_lexicon":
+        # Lexicon kecil khusus kata-kata akurasi
+        pos_words = [
+            "accurate",
+            "very accurate",
+            "quite accurate",
+            "precise",
+            "spot on",
+            "reliable",
+        ]
+        neg_words = [
+            "inaccurate",
+            "not accurate",
+            "way off",
+            "far off",
+            "unreliable",
+            "drift",
+            "wrong distance",
+            "off by",
+        ]
+
+        def custom_score(t):
+            t_low = t.lower()
+            score = 0
+            for w in pos_words:
+                if w in t_low:
+                    score += 1
+            for w in neg_words:
+                if w in t_low:
+                    score -= 1
+            if score == 0:
+                return 0.0
+            # Normalisasi kasar ke [-1, 1]
+            return max(-1.0, min(1.0, score / 3.0))
+
+        df["text_sentiment"] = texts.apply(custom_score)
+
+    # Combine menjadi sentiment_score utama
+    if algorithm in ("vader", "textblob", "afinn", "transformer", "custom_lexicon"):
         df["sentiment_score"] = df["text_sentiment"]
     elif algorithm == "rating":
         df["sentiment_score"] = df["rating_based_score"]
     elif algorithm == "hybrid":
+        # Hybrid: gabungan text-based (VADER) + rating
+        # Kalau mau hybrid spesifik TextBlob+rating, bisa bikin opsi lain.
+        # Di sini kita pakai VADER untuk text_sentiment kalau kosong.
+        mask_nan = df["text_sentiment"].isna()
+        if mask_nan.any():
+            df.loc[mask_nan, "text_sentiment"] = texts[mask_nan].apply(
+                lambda x: sia.polarity_scores(x)["compound"]
+            )
         df["sentiment_score"] = (
             0.5 * df["text_sentiment"].fillna(0)
             + 0.5 * df["rating_based_score"].fillna(0)
@@ -294,7 +418,7 @@ Aplikasi ini menganalisis **review Strava** dari Google Play Store dengan fokus 
 
 **Fitur utama:**
 - Ambil data langsung dari Google Play Store **atau** gunakan file CSV contoh / upload sendiri  
-- Analisis sentimen dengan beberapa **algoritma yang bisa dipilih**  
+- Analisis sentimen dengan **berbagai algoritma** (VADER, Rating-based, TextBlob, AFINN, Transformer, Lexicon custom)  
 - Aspect-based sentiment untuk review yang membahas **accuracy**  
 - Ringkasan per device + grafik (bar chart & time series)
 """
@@ -323,7 +447,7 @@ elif data_source == "Ambil dari Play Store":
         max_value=5000,
         step=100,
         value=1000,
-        help="Untuk produksi bisa dinaikkan sampai ~100k, tapi perhatikan limit & waktu.",
+        help="Untuk produksi bisa dinaikkan sampai ~100k, tapi transformer bakal berat.",
     )
 
     if st.sidebar.button("🚀 Ambil data dari Play Store"):
@@ -416,6 +540,10 @@ algo_label = st.sidebar.selectbox(
         "VADER (berbasis teks)",
         "Rating saja",
         "Hybrid (VADER + Rating)",
+        "TextBlob",
+        "AFINN",
+        "Transformer (BERT - DistilBERT SST-2)",
+        "Custom Lexicon (Accuracy-focused)",
     ),
 )
 
@@ -423,6 +551,10 @@ algo_map = {
     "VADER (berbasis teks)": "vader",
     "Rating saja": "rating",
     "Hybrid (VADER + Rating)": "hybrid",
+    "TextBlob": "textblob",
+    "AFINN": "afinn",
+    "Transformer (BERT - DistilBERT SST-2)": "transformer",
+    "Custom Lexicon (Accuracy-focused)": "custom_lexicon",
 }
 algo_key = algo_map[algo_label]
 
