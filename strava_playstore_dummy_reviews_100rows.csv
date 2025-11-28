@@ -1,101 +1,101 @@
-review_id,review_text,rating,review_date,device_mentioned
-1,Accuracy with my Garmin is decent but could be better on trails.,3,2023-08-17,Garmin
-2,Overall acceptable accuracy with my Huawei Band for casual runs.,3,2024-08-27,Huawei Band
-3,Really happy with the GPS accuracy when paired with my Garmin.,4,2024-06-01,Garmin
-4,Data from my Suunto uploads fast and looks very accurate in Strava.,5,2023-08-14,Suunto
-5,Really happy with the GPS accuracy when paired with my Polar.,5,2023-12-15,Polar
-6,"Accuracy with my Fitbit is terrible, distance is always off by at least 500m.",1,2024-01-25,Fitbit
-7,Accuracy with my Coros is decent but could be better on trails.,3,2024-04-15,Coros
-8,Data from my Samsung Watch uploads fast and looks very accurate in Strava.,5,2024-10-05,Samsung Watch
-9,"Sync with my Coros is normal, nothing special, nothing too bad.",3,2023-02-16,Coros
-10,Really happy with the GPS accuracy when paired with my Polar.,4,2024-01-25,Polar
-11,Heart rate and pace from my Coros match almost exactly with Strava. Great job!,5,2023-08-03,Coros
-12,"Sync with my Huawei Band is normal, nothing special, nothing too bad.",3,2023-06-17,Huawei Band
-13,Overall acceptable accuracy with my Polar for casual runs.,3,2023-11-29,Polar
-14,Nice interface but sometimes the GPS drifts a bit.,2,2023-11-20,
-15,Data from my Huawei Band uploads fast and looks very accurate in Strava.,5,2023-08-06,Huawei Band
-16,"Sometimes Strava is spot on with my Samsung Watch, sometimes pace jumps a bit.",3,2023-09-29,Samsung Watch
-17,Accuracy with my Suunto is decent but could be better on trails.,4,2024-08-20,Suunto
-18,Data from my Fitbit uploads fast and looks very accurate in Strava.,5,2023-04-04,Fitbit
-19,Really happy with the GPS accuracy when paired with my Huawei Band.,5,2024-09-02,Huawei Band
-20,"Sometimes Strava is spot on with my Samsung Watch, sometimes pace jumps a bit.",4,2024-07-20,Samsung Watch
-21,App is good for tracking my runs and sharing with friends.,4,2024-10-18,
-22,"Strava shows very different pace compared to my Polar, super annoying.",2,2023-01-04,Polar
-23,I mostly use it for cycling and it's okay.,3,2024-06-03,
-24,I mostly use it for cycling and it's okay.,3,2023-06-06,
-25,Overall acceptable accuracy with my Apple Watch for casual runs.,3,2024-09-05,Apple Watch
-26,Heart rate and pace from my Garmin match almost exactly with Strava. Great job!,5,2023-09-03,Garmin
-27,"Surprisingly accurate with my Huawei Band, even in the city with tall buildings.",4,2024-06-29,Huawei Band
-28,"Sometimes Strava is spot on with my Apple Watch, sometimes pace jumps a bit.",3,2023-09-29,Apple Watch
-29,Data from my Samsung Watch uploads fast and looks very accurate in Strava.,4,2023-11-16,Samsung Watch
-30,Syncing from my Coros is fine but the stats in Strava are not accurate at all.,2,2023-05-04,Coros
-31,"Accuracy with my Huawei Band is terrible, distance is always off by at least 500m.",1,2024-08-25,Huawei Band
-32,"Works okay with my Huawei Band, some runs are accurate, some are a bit off.",3,2023-03-11,Huawei Band
-33,App is good for tracking my runs and sharing with friends.,3,2023-10-13,
-34,"Sync with my Fitbit is normal, nothing special, nothing too bad.",4,2023-09-06,Fitbit
-35,"Sync with my Samsung Watch is super accurate, distance and pace match perfectly.",4,2024-11-05,Samsung Watch
-36,GPS track is all over the place when using my Samsung Watch.,1,2024-11-20,Samsung Watch
-37,"Surprisingly accurate with my Huawei Band, even in the city with tall buildings.",5,2023-04-22,Huawei Band
-38,"Sometimes Strava is spot on with my Fitbit, sometimes pace jumps a bit.",3,2024-03-08,Fitbit
-39,"Sync with my Xiaomi Band is super accurate, distance and pace match perfectly.",5,2024-07-17,Xiaomi Band
-40,"Sync with my Suunto is super accurate, distance and pace match perfectly.",4,2023-06-20,Suunto
-41,"Surprisingly accurate with my Xiaomi Band, even in the city with tall buildings.",4,2023-06-18,Xiaomi Band
-42,GPS track is all over the place when using my Samsung Watch.,2,2024-03-09,Samsung Watch
-43,"Sometimes Strava is spot on with my Suunto, sometimes pace jumps a bit.",3,2023-07-14,Suunto
-44,Overall acceptable accuracy with my Garmin for casual runs.,3,2023-11-18,Garmin
-45,Overall acceptable accuracy with my Xiaomi Band for casual runs.,3,2023-02-28,Xiaomi Band
-46,Nice interface but sometimes the GPS drifts a bit.,2,2024-09-01,
-47,"Accuracy with my Fitbit is terrible, distance is always off by at least 500m.",1,2024-08-15,Fitbit
-48,Syncing from my Huawei Band is fine but the stats in Strava are not accurate at all.,2,2023-09-25,Huawei Band
-49,Heart rate and pace from my Coros match almost exactly with Strava. Great job!,5,2023-05-15,Coros
-50,Heart rate data from my Polar looks wrong once it syncs to Strava.,1,2023-01-10,Polar
-51,Data from my Huawei Band uploads fast and looks very accurate in Strava.,4,2024-06-02,Huawei Band
-52,Really happy with the GPS accuracy when paired with my Coros.,5,2023-10-19,Coros
-53,Accuracy with my Suunto is decent but could be better on trails.,3,2024-11-14,Suunto
-54,App is good for tracking my runs and sharing with friends.,3,2023-09-28,
-55,Overall acceptable accuracy with my Huawei Band for casual runs.,3,2023-10-06,Huawei Band
-56,Accuracy with my Fitbit is decent but could be better on trails.,3,2024-10-11,Fitbit
-57,Good app but battery drain is high on long runs.,4,2023-02-22,
-58,"Accuracy with my Samsung Watch is terrible, distance is always off by at least 500m.",1,2023-12-08,Samsung Watch
-59,"Surprisingly accurate with my Polar, even in the city with tall buildings.",5,2024-07-28,Polar
-60,"Sync with my Huawei Band is normal, nothing special, nothing too bad.",3,2024-01-14,Huawei Band
-61,"Strava shows very different pace compared to my Apple Watch, super annoying.",1,2023-11-12,Apple Watch
-62,"Strava shows very different pace compared to my Garmin, super annoying.",1,2024-11-13,Garmin
-63,Syncing from my Suunto is fine but the stats in Strava are not accurate at all.,1,2023-08-31,Suunto
-64,Good app but battery drain is high on long runs.,2,2023-07-03,
-65,"Strava shows very different pace compared to my Coros, super annoying.",2,2023-06-13,Coros
-66,"Accuracy with my Huawei Band is terrible, distance is always off by at least 500m.",2,2023-08-16,Huawei Band
-67,Heart rate data from my Xiaomi Band looks wrong once it syncs to Strava.,1,2023-08-17,Xiaomi Band
-68,Heart rate data from my Fitbit looks wrong once it syncs to Strava.,2,2023-03-13,Fitbit
-69,I mostly use it for cycling and it's okay.,5,2024-11-26,
-70,I mostly use it for cycling and it's okay.,2,2023-04-29,
-71,Nice interface but sometimes the GPS drifts a bit.,4,2023-02-09,
-72,Heart rate data from my Samsung Watch looks wrong once it syncs to Strava.,2,2024-09-12,Samsung Watch
-73,Good app but battery drain is high on long runs.,3,2023-09-18,
-74,Data from my Samsung Watch uploads fast and looks very accurate in Strava.,4,2024-01-08,Samsung Watch
-75,Accuracy with my Coros is decent but could be better on trails.,3,2023-11-04,Coros
-76,GPS track is all over the place when using my Samsung Watch.,2,2024-07-21,Samsung Watch
-77,"Sometimes Strava is spot on with my Samsung Watch, sometimes pace jumps a bit.",3,2024-09-22,Samsung Watch
-78,"Works okay with my Samsung Watch, some runs are accurate, some are a bit off.",4,2023-10-21,Samsung Watch
-79,GPS track is all over the place when using my Coros.,2,2024-11-22,Coros
-80,"Sync with my Xiaomi Band is normal, nothing special, nothing too bad.",3,2023-10-18,Xiaomi Band
-81,Really happy with the GPS accuracy when paired with my Coros.,5,2023-08-19,Coros
-82,App is good for tracking my runs and sharing with friends.,2,2023-09-08,
-83,App is good for tracking my runs and sharing with friends.,5,2024-02-29,
-84,Nice interface but sometimes the GPS drifts a bit.,5,2024-05-21,
-85,"Works okay with my Apple Watch, some runs are accurate, some are a bit off.",3,2024-03-11,Apple Watch
-86,"Accuracy with my Suunto is terrible, distance is always off by at least 500m.",1,2023-05-05,Suunto
-87,Overall acceptable accuracy with my Xiaomi Band for casual runs.,4,2024-03-29,Xiaomi Band
-88,Syncing from my Suunto is fine but the stats in Strava are not accurate at all.,2,2023-06-12,Suunto
-89,Heart rate data from my Xiaomi Band looks wrong once it syncs to Strava.,1,2024-10-14,Xiaomi Band
-90,"Strava shows very different pace compared to my Suunto, super annoying.",2,2024-03-26,Suunto
-91,Heart rate and pace from my Polar match almost exactly with Strava. Great job!,5,2023-11-24,Polar
-92,Nice interface but sometimes the GPS drifts a bit.,3,2023-08-25,
-93,"Sync with my Apple Watch is normal, nothing special, nothing too bad.",3,2024-02-29,Apple Watch
-94,GPS track is all over the place when using my Suunto.,1,2023-07-31,Suunto
-95,"Easy to use, but would love better analysis features.",2,2024-08-12,
-96,Heart rate data from my Garmin looks wrong once it syncs to Strava.,2,2024-03-05,Garmin
-97,"Sync with my Suunto is normal, nothing special, nothing too bad.",4,2023-08-13,Suunto
-98,"Surprisingly accurate with my Xiaomi Band, even in the city with tall buildings.",5,2024-11-15,Xiaomi Band
-99,"Sync with my Samsung Watch is normal, nothing special, nothing too bad.",4,2023-05-11,Samsung Watch
-100,App is good for tracking my runs and sharing with friends.,5,2024-08-29,
+review_id;review_text;rating;review_date
+1;Accuracy with my Garmin is decent but could be better on trails.;3;17/08/2023
+2;Overall acceptable accuracy with my Huawei Band for casual runs.;3;27/08/2024
+3;Really happy with the GPS accuracy when paired with my Garmin.;4;01/06/2024
+4;Data from my Suunto uploads fast and looks very accurate in Strava.;5;14/08/2023
+5;Really happy with the GPS accuracy when paired with my Polar.;5;15/12/2023
+6;Accuracy with my Fitbit is terrible, distance is always off by at least 500m.;1;25/01/2024
+7;Accuracy with my Coros is decent but could be better on trails.;3;15/04/2024
+8;Data from my Samsung Watch uploads fast and looks very accurate in Strava.;5;05/10/2024
+9;Sync with my Coros is normal, nothing special, nothing too bad.;3;16/02/2023
+10;Really happy with the GPS accuracy when paired with my Polar.;4;25/01/2024
+11;Heart rate and pace from my Coros match almost exactly with Strava. Great job!;5;03/08/2023
+12;Sync with my Huawei Band is normal, nothing special, nothing too bad.;3;17/06/2023
+13;Overall acceptable accuracy with my Polar for casual runs.;3;29/11/2023
+14;Nice interface but sometimes the GPS drifts a bit.;2;20/11/2023
+15;Data from my Huawei Band uploads fast and looks very accurate in Strava.;5;06/08/2023
+16;Sometimes Strava is spot on with my Samsung Watch, sometimes pace jumps a bit.;3;29/09/2023
+17;Accuracy with my Suunto is decent but could be better on trails.;4;20/08/2024
+18;Data from my Fitbit uploads fast and looks very accurate in Strava.;5;04/04/2023
+19;Really happy with the GPS accuracy when paired with my Huawei Band.;5;02/09/2024
+20;Sometimes Strava is spot on with my Samsung Watch, sometimes pace jumps a bit.;4;20/07/2024
+21;App is good for tracking my runs and sharing with friends.;4;18/10/2024
+22;Strava shows very different pace compared to my Polar, super annoying.;2;04/01/2023
+23;I mostly use it for cycling and it's okay.;3;03/06/2024
+24;I mostly use it for cycling and it's okay.;3;06/06/2023
+25;Overall acceptable accuracy with my Apple Watch for casual runs.;3;05/09/2024
+26;Heart rate and pace from my Garmin match almost exactly with Strava. Great job!;5;03/09/2023
+27;Surprisingly accurate with my Huawei Band, even in the city with tall buildings.;4;29/06/2024
+28;Sometimes Strava is spot on with my Apple Watch, sometimes pace jumps a bit.;3;29/09/2023
+29;Data from my Samsung Watch uploads fast and looks very accurate in Strava.;4;16/11/2023
+30;Syncing from my Coros is fine but the stats in Strava are not accurate at all.;2;04/05/2023
+31;Accuracy with my Huawei Band is terrible, distance is always off by at least 500m.;1;25/08/2024
+32;Works okay with my Huawei Band, some runs are accurate, some are a bit off.;3;11/03/2023
+33;App is good for tracking my runs and sharing with friends.;3;13/10/2023
+34;Sync with my Fitbit is normal, nothing special, nothing too bad.;4;06/09/2023
+35;Sync with my Samsung Watch is super accurate, distance and pace match perfectly.;4;05/11/2024
+36;GPS track is all over the place when using my Samsung Watch.;1;20/11/2024
+37;Surprisingly accurate with my Huawei Band, even in the city with tall buildings.;5;22/04/2023
+38;Sometimes Strava is spot on with my Fitbit, sometimes pace jumps a bit.;3;08/03/2024
+39;Sync with my Xiaomi Band is super accurate, distance and pace match perfectly.;5;17/07/2024
+40;Sync with my Suunto is super accurate, distance and pace match perfectly.;4;20/06/2023
+41;Surprisingly accurate with my Xiaomi Band, even in the city with tall buildings.;4;18/06/2023
+42;GPS track is all over the place when using my Samsung Watch.;2;09/03/2024
+43;Sometimes Strava is spot on with my Suunto, sometimes pace jumps a bit.;3;14/07/2023
+44;Overall acceptable accuracy with my Garmin for casual runs.;3;18/11/2023
+45;Overall acceptable accuracy with my Xiaomi Band for casual runs.;3;28/02/2023
+46;Nice interface but sometimes the GPS drifts a bit.;2;01/09/2024
+47;Accuracy with my Fitbit is terrible, distance is always off by at least 500m.;1;15/08/2024
+48;Syncing from my Huawei Band is fine but the stats in Strava are not accurate at all.;2;25/09/2023
+49;Heart rate and pace from my Coros match almost exactly with Strava. Great job!;5;15/05/2023
+50;Heart rate data from my Polar looks wrong once it syncs to Strava.;1;10/01/2023
+51;Data from my Huawei Band uploads fast and looks very accurate in Strava.;4;02/06/2024
+52;Really happy with the GPS accuracy when paired with my Coros.;5;19/10/2023
+53;Accuracy with my Suunto is decent but could be better on trails.;3;14/11/2024
+54;App is good for tracking my runs and sharing with friends.;3;28/09/2023
+55;Overall acceptable accuracy with my Huawei Band for casual runs.;3;06/10/2023
+56;Accuracy with my Fitbit is decent but could be better on trails.;3;11/10/2024
+57;Good app but battery drain is high on long runs.;4;22/02/2023
+58;Accuracy with my Samsung Watch is terrible, distance is always off by at least 500m.;1;08/12/2023
+59;Surprisingly accurate with my Polar, even in the city with tall buildings.;5;28/07/2024
+60;Sync with my Huawei Band is normal, nothing special, nothing too bad.;3;14/01/2024
+61;Strava shows very different pace compared to my Apple Watch, super annoying.;1;12/11/2023
+62;Strava shows very different pace compared to my Garmin, super annoying.;1;13/11/2024
+63;Syncing from my Suunto is fine but the stats in Strava are not accurate at all.;1;31/08/2023
+64;Good app but battery drain is high on long runs.;2;03/07/2023
+65;Strava shows very different pace compared to my Coros, super annoying.;2;13/06/2023
+66;Accuracy with my Huawei Band is terrible, distance is always off by at least 500m.;2;16/08/2023
+67;Heart rate data from my Xiaomi Band looks wrong once it syncs to Strava.;1;17/08/2023
+68;Heart rate data from my Fitbit looks wrong once it syncs to Strava.;2;13/03/2023
+69;I mostly use it for cycling and it's okay.;5;26/11/2024
+70;I mostly use it for cycling and it's okay.;2;29/04/2023
+71;Nice interface but sometimes the GPS drifts a bit.;4;09/02/2023
+72;Heart rate data from my Samsung Watch looks wrong once it syncs to Strava.;2;12/09/2024
+73;Good app but battery drain is high on long runs.;3;18/09/2023
+74;Data from my Samsung Watch uploads fast and looks very accurate in Strava.;4;08/01/2024
+75;Accuracy with my Coros is decent but could be better on trails.;3;04/11/2023
+76;GPS track is all over the place when using my Samsung Watch.;2;21/07/2024
+77;Sometimes Strava is spot on with my Samsung Watch, sometimes pace jumps a bit.;3;22/09/2024
+78;Works okay with my Samsung Watch, some runs are accurate, some are a bit off.;4;21/10/2023
+79;GPS track is all over the place when using my Coros.;2;22/11/2024
+80;Sync with my Xiaomi Band is normal, nothing special, nothing too bad.;3;18/10/2023
+81;Really happy with the GPS accuracy when paired with my Coros.;5;19/08/2023
+82;App is good for tracking my runs and sharing with friends.;2;08/09/2023
+83;App is good for tracking my runs and sharing with friends.;5;29/02/2024
+84;Nice interface but sometimes the GPS drifts a bit.;5;21/05/2024
+85;Works okay with my Apple Watch, some runs are accurate, some are a bit off.;3;11/03/2024
+86;Accuracy with my Suunto is terrible, distance is always off by at least 500m.;1;05/05/2023
+87;Overall acceptable accuracy with my Xiaomi Band for casual runs.;4;29/03/2024
+88;Syncing from my Suunto is fine but the stats in Strava are not accurate at all.;2;12/06/2023
+89;Heart rate data from my Xiaomi Band looks wrong once it syncs to Strava.;1;14/10/2024
+90;Strava shows very different pace compared to my Suunto, super annoying.;2;26/03/2024
+91;Heart rate and pace from my Polar match almost exactly with Strava. Great job!;5;24/11/2023
+92;Nice interface but sometimes the GPS drifts a bit.;3;25/08/2023
+93;Sync with my Apple Watch is normal, nothing special, nothing too bad.;3;29/02/2024
+94;GPS track is all over the place when using my Suunto.;1;31/07/2023
+95;Easy to use, but would love better analysis features.;2;12/08/2024
+96;Heart rate data from my Garmin looks wrong once it syncs to Strava.;2;05/03/2024
+97;Sync with my Suunto is normal, nothing special, nothing too bad.;4;13/08/2023
+98;Surprisingly accurate with my Xiaomi Band, even in the city with tall buildings.;5;15/11/2024
+99;Sync with my Samsung Watch is normal, nothing special, nothing too bad.;4;11/05/2023
+100;App is good for tracking my runs and sharing with friends.;5;29/08/2024
